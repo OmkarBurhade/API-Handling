@@ -21,3 +21,9 @@ git log --oneline har commit history bataata hein
 
 # staging in github
 jab aap kisi branch mine kaam kr rahe ho and aapne kuchh code likha hein and aapne us code ko commit nahi kiya hein, aur aap dusri beanch mein jaane ki koshish kr rahe ho to git apko bolta hein ki bhai changes save nahi hein changes delete ho jaayenge hum chahe to us changes ko delete kr sakte hein aur chahe to draft bhi kr sakte hein, jubh bhi draft karenge to wo changes naa hi delete honge aur nahi add honge but beech me hi kahi dale rahenge fir app us branch mein jub waapas aaye to wo changes aap wapas se aplya kr kr sakte ho.
+
+# git switch branch name
+ye branch me switch hone ke liye hein.
+
+# git switch -c branch name
+is command mein "-c" ye yek naya branch create krta hein aur us branch me switch ho jaata hein
