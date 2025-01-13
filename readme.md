@@ -65,7 +65,7 @@ merger banda fetch karega and merge karega and re-push karega
     ye commond brach exchange krti hein aur agar wo branch existing hi nahi ho to wo us branch ko khud hi bana leti hein.
 7) **git branch**
     ye commond github me se sare branch ko dikhati hein.
-8) **git push origin main **
+8) **git push origin main**
     ye commond github me main branch me code push krdeti hein.
 9) **git fetch**
     ye commond github se code fetch kr leta hein.
