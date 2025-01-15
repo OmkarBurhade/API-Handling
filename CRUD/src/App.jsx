@@ -1,5 +1,5 @@
 import React from 'react'
-import { getPost } from './utils/PostApi'
+import { getData } from './utils/PostApi'
 import { useEffect } from 'react';
 import Cards from './components/Cards';
 import Form from './components/Form';

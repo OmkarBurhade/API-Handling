@@ -1,8 +1,5 @@
 import React, { useContext } from 'react'
 import Card from './Card'
-import { useState } from 'react'
-import { useEffect } from 'react';
-import { getPost } from '../utils/PostApi';
 import { ContextData } from '../context/Context';
 
 const Cards = () => {

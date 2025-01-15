@@ -1,19 +1,25 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { getPost } from '../utils/PostApi';
+import { getData } from '../utils/PostApi';
 export const ContextData = createContext()
 const Context = (props) => {
+
+    // getting cards from api 
     const [card, setCard] = useState([])
-    const getPostData = async () => {
-        const res = await getPost();
+
+    // getting cards data from edit button 
+    const [updateDataApi, setUpdateDataApi] = useState({})
+
+    const getDataData = async () => {
+        const res = await getData();
         setCard(res.data);
     };
 
     useEffect(() => {
-        getPostData();
+        getDataData();
     }, [])
-    
+
     return (
-        <ContextData.Provider value={{ card, setCard }}>
+        <ContextData.Provider value={{ card, setCard, updateDataApi, setUpdateDataApi }}>
             {props.children}
         </ContextData.Provider>
     )

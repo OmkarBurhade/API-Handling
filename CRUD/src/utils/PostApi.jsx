@@ -1,24 +1,27 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL:'https://jsonplaceholder.typicode.com'
+    baseURL: 'https://jsonplaceholder.typicode.com'
 
 });
 
 // get method 
-
-export const getPost = ()=>{
+export const getData = () => {
     return api.get("/posts");
-} 
+}
 
 // delete method
-export const deletePost = (id)=>{
+export const deletePost = (id) => {
     return api.delete(`/posts/${id}`);
-} 
+}
 
 // post method
-
-export const postData = (post)=>{
+export const postData = (post) => {
     // console.log(post);
     return api.post('/posts', post)
+}
+
+// put method
+export const updateData = (id, post)=>{
+    return api.put(`/posts/${id}`, post)
 }
