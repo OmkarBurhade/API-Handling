@@ -5,13 +5,20 @@ const api = axios.create({
 
 });
 
-// get mothod 
+// get method 
 
 export const getPost = ()=>{
     return api.get("/posts");
 } 
 
-// delete mothod
+// delete method
 export const deletePost = (id)=>{
     return api.delete(`/posts/${id}`);
 } 
+
+// post method
+
+export const postData = (post)=>{
+    // console.log(post);
+    return api.post('/posts', post)
+}

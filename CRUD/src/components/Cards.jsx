@@ -1,21 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from './Card'
 import { useState } from 'react'
 import { useEffect } from 'react';
 import { getPost } from '../utils/PostApi';
+import { ContextData } from '../context/Context';
 
 const Cards = () => {
-    const [card, setCard] = useState([])
-    const getPostData = async () => {
-        const res = await getPost();
-        setCard(res.data);
-    };
-
-    useEffect(() => {
-        getPostData();
-    }, [])
-
-
+    const { card, setCard } = useContext(ContextData) // from Context.jsx
+    
     return (
         <div className='w-full'>
             <Card cardData={card} setcardDtata={setCard} />
