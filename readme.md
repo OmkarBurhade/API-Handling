@@ -22,7 +22,8 @@
 
 
 **converting context to redux**
-
+**useRef** in react
+**useReducer**
 
 # how to Live React Project
   •run this command:
