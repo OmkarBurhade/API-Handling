@@ -26,11 +26,29 @@
     }
 }
 </pre>
+
 <pre>
 {
     type:"counter/decrement",
     payload:{
         decrementBy:10,
+    }
+}
+</pre>
+
+
+<h3>Reducer</h3>
+<p>How to do It actually change the data in the store based on the actions.</p>
+
+
+<pre>
+export const counterReducer = (state = initialState, action)=>{
+    switch (action.type){
+        case "counter/add":
+            return
+                {...state, value: state.value + action.payload.incrementBY };
+        default:
+            return state;
     }
 }
 </pre>
