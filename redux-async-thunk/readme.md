@@ -9,6 +9,9 @@
 <p>It allows us to keep all our app's data in a single place. known as the redux store, making it easy to share and update data across different parts of the app.</p>
 
 <h3>How Redux Works?</h3>
-<p><b>Store:</b> </br>this is where Redux keeps all your data.</p>
-<p><b>Action:</b> </br>this is an object, which tell the redux what to do (like adding a task).</p>
-<p><b>Reducer:</b> </br>How to do It actually change the data in the store based on the actions.</p>
+<p><b>1) Store:</b> this is where Redux keeps all your data.</p>
+<p><b>2) Action:</b> this is an object, which tell the redux what to do (like adding a task).</p>
+<p><b>3) Reducer:</b> How to do It actually change the data in the store based on the actions.</p>
+
+<h3>Store</h3>
+<p>the Redux store is like a big box where all your applications data is kept safe. Everything you do with Redux-whether adding, removing, or updating data-goes through this store</p>
