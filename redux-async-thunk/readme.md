@@ -25,7 +25,8 @@
         incrementBy:10,
     }
 }
-
+</pre>
+<pre>
 {
     type:"counter/decrement",
     payload:{
