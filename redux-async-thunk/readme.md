@@ -15,3 +15,20 @@
 
 <h3>Store</h3>
 <p>the Redux store is like a big box where all your applications data is kept safe. Everything you do with Redux-whether adding, removing, or updating data-goes through this store</p>
+
+<h3>Action</h3>
+<p>this is an object, which tell the redux what to do (like adding a task).</p>
+
+{
+    type:"counter/add",
+    payload:{
+        incrementBy:10,
+    }
+}
+
+{
+    type:"counter/decrement",
+    payload:{
+        decrementBy:10,
+    }
+}
