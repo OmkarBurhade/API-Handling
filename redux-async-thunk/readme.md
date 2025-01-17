@@ -60,3 +60,7 @@ export const counterReducer = (state = initialState, action)=>{
 <p>Any component can access and update the state without passing props down.</p>
 <h3>Predictable Updates</h3>
 <p>State changes are controlled and predictable using reducers.</p>
+<h3>DevTools</h3>
+<p>Powerfull tools for debugging, inspecting state, and replaying actions.</p>
+<h3>Async Support</h3>
+<p>Middleware like Thunk or Saga handles async tasks, keeping the code clean.</p>
