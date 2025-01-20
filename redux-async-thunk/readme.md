@@ -71,4 +71,5 @@ export const counterReducer = (state = initialState, action)=>{
 <p>when you return a funtion from an action creator, Redux Thunk Provides the dispatch function as an argument. This allows you to manually dispatch other actions (e.g., when an API call succeeds or fails.)</p>
 
 <h1>Resux Toolkit</h1>
+<h3>How it's work</h3>
 <img src="image.png" alt=""/>
