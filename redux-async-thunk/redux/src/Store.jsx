@@ -1,13 +1,15 @@
-import { createStore } from "redux"
+import { applyMiddleware, createStore } from "redux";
+import { composeWithDevTools } from "@redux-devtools/extension";
+import { thunk } from "redux-thunk";
 const ADD_TASK = "task/add";
 const DELETE_TASK = "task/delete";
-
+const FETCH_TASK = "task/fetch";
 const initialState = {
     task: [],
-    isLoading: false,
+    userdetails: {}
 };
 
-const tastReducer = (state = initialState, action) => {
+const taskReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case ADD_TASK:
@@ -24,32 +26,51 @@ const tastReducer = (state = initialState, action) => {
                 ...state,
                 task: deleteTask,
             }
-
-
+        case FETCH_TASK:
+            return {
+                ...state,
+                task: [...state.task, ...action.payload],
+            }
+        // case FETCH_TASK:
         default:
             return state;
     }
 };
 
-const store = createStore(tastReducer);
+export const store = createStore(taskReducer,
+    composeWithDevTools(applyMiddleware(thunk))
+);
 console.log(store);
 
-// console.log("initial state: ", store.getState());
+// add task 
 
-const addTssk = (data) => {
+export const addTask = (data) => {
     return { type: ADD_TASK, payload: data }
 }
 
-store.dispatch(addTssk("shri radha"));
-console.log("Delete state: ", store.getState());
-store.dispatch(addTssk("shri keishna"));
-console.log("Delete state: ", store.getState());
-store.dispatch(addTssk("omkar's kaam"));
-console.log("Delete state: ", store.getState());
+store.dispatch(addTask("shri radha"));
+store.dispatch(addTask("shri keishna"));
+store.dispatch(addTask("shri balaram"));
+store.dispatch(addTask("shri tansukha"));
+store.dispatch(addTask("shri mansukha"));
+store.dispatch(addTask("omkar's kaam"));
 
-
-const deleteTask = (id) => {
+// delete task 
+export const deleteTask = (id) => {
     return { type: DELETE_TASK, payload: id }
 }
 store.dispatch(deleteTask(2));
-console.log("Delete state: ", store.getState());
+
+// fetch task
+export const fetchTask = () => {
+    return async (dispatch) => {
+        try {
+            const res = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=3');
+            const task = await res.json();
+            console.log(task);
+            dispatch({ type: FETCH_TASK, payload: task.map((curTask) => curTask.title) });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}

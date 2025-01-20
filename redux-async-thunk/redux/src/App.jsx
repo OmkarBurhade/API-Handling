@@ -1,9 +1,10 @@
 import React from 'react'
+import Todo from './components/Todo'
 
 const App = () => {
   return (
-    <div className='max-w-screen-xl mx-auto h-screen bg-zinc-500 '>
-      App
+    <div className=' h-screen bg-zinc-500 flex justify-center items-center'>
+      <Todo />
     </div>
   )
 }

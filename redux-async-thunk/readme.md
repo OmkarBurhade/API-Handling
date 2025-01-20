@@ -64,3 +64,8 @@ export const counterReducer = (state = initialState, action)=>{
 <p>Powerfull tools for debugging, inspecting state, and replaying actions.</p>
 <h3>Async Support</h3>
 <p>Middleware like Thunk or Saga handles async tasks, keeping the code clean.</p>
+
+<h1>Resux Thunk</h1>
+<h3>What is Resux Thunk?</h3>
+<p>Redux Thunk is middleware that allows you to write action creators that return a function instead of an action. This function can perform asynchronous logic (like API requests) and dispatch actions after the operation is completed (e.g., fetching tasks and then dispatching them to the store).</p>
+<p>when you return a funtion from an action creator, Redux Thunk Provides the dispatch function as an argument. This allows you to manually dispatch other actions (e.g., when an API call succeeds or fails.)</p>
