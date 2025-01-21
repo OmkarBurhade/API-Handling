@@ -21,6 +21,13 @@
 6) verify redux browser extensions ✅
 7) material UI 
 8) make the counter application make a conter state  + / * -  axios .get .put .update .delete
+9) make a name and last name input type and make a todo list
+    • create a form using first name last name and save it button
+    • below table show the list of cusomers
+    • one edit button
+    • one delete button
+    
+10) Suspens not yet
 **converting context to redux**
 **useRef** in react
 **useReducer**

@@ -11,25 +11,30 @@ const Counter = () => {
 
     useEffect(() => {
         dispatch(fetchCounter())
+        console.log("calling counter log from data base");
+
     }, [])
 
     const handleIncrement = () => {
-        dispatch(increment());
+        // dispatch(increment());
         dispatch(updateCounter(value + 1))
     };
     const handleDecrement = () => {
-        dispatch(decrement());
+        // dispatch(decrement());
         dispatch(updateCounter(value - 1))
     };
     const handleMultiply = () => {
-        dispatch(multiply());
+        // dispatch(multiply());
         dispatch(updateCounter(value * 2))
     };
     const handleDivided = () => {
-        dispatch(Divided());
+        // dispatch(Divided());
         dispatch(updateCounter(value / 2))
     };
 
+    const handleCleare = () => {
+        dispatch(updateCounter(0))
+    }
     return (
         <div>
             <h1 className=''>Counter Application</h1>
@@ -37,7 +42,7 @@ const Counter = () => {
             {error && <p>Error: {error}</p>}
             <h2 className='my-2'>Counter Value: {value}</h2>
 
-            <button onClick={()=>(handleIncrement())} className='py-2 px-5 bg-purple-400 rounded text-md font-semibold text-center content-center mt-5'>+ Increment</button>
+            <button onClick={handleIncrement} className='py-2 px-5 bg-purple-400 rounded text-md font-semibold text-center content-center mt-5'>+ Increment</button>
 
             <button onClick={handleDecrement} className='py-2 px-5 bg-purple-400 mx-2 rounded text-md font-semibold text-center content-center mt-5'>- Decrement</button>
 
@@ -45,6 +50,7 @@ const Counter = () => {
 
             <button onClick={handleDivided} className='py-2 px-5 bg-purple-400 mx-2 rounded text-md font-semibold text-center content-center mt-5'>/ Divided</button>
 
+            <button onClick={handleCleare} className='py-2 px-5 bg-purple-400 mx-2 rounded text-md font-semibold text-center content-center mt-5'>/ Cleare</button>
         </div>
     )
 }

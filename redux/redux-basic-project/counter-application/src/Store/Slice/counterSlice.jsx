@@ -28,6 +28,18 @@ export const updateCounter = createAsyncThunk(
     }
 )
 
+export const clearData = createAsyncThunk(
+    'counter/clearData',
+    async (newValue, { rejectWithValue }) => {
+        try {
+            const res = await axios.put('counter', { id: 1, value: newValue });
+            return res.data
+        } catch (error) {
+            return rejectWithValue(error.message);
+        }
+    }
+)
+
 const initialState = {
     value: 0,
     loading: false,
@@ -38,21 +50,22 @@ export const counterSlice = createSlice({
     name: 'counter',
     initialState,
     reducers: {
-        increment: (state) => {
-            state.value += 1
-        },
-        decrement: (state) => {
-            state.value -= 1
-        },
-        multiply: (state) => {
-            state.value *= 1
-        },
-        Divided: (state) => {
-            state.value /= 1
-        },
+        // increment: (state) => {
+        //     state.value += 1
+        // },
+        // decrement: (state) => {
+        //     state.value -= 1
+        // },
+        // multiply: (state) => {
+        //     state.value *= 1
+        // },
+        // Divided: (state) => {
+        //     state.value /= 1
+        // },
     },
     extraReducers: (builder) => {
         builder
+            // this is fetchedCounter Reducer
             .addCase(fetchCounter.pending, (state) => {
                 state.loading = true;
                 state.error = null;
@@ -65,6 +78,8 @@ export const counterSlice = createSlice({
                 state.loading = false;
                 state.error = action.payload;
             })
+
+            // this is updateCouter reducer
             .addCase(updateCounter.pending, (state) => {
                 state.loading = true;
             })
@@ -75,8 +90,20 @@ export const counterSlice = createSlice({
             .addCase(updateCounter.rejected, (state, action) => {
                 state.loading = false;
                 state.error = action.payload;
-            });
+            })
 
+            // this is clearData reducer
+            .addCase(clearData.pending, (state) => {
+                state.loading = true;
+            })
+            .addCase(clearData.fulfilled, (state, action) => {
+                state.loading = false;
+                satisfies.value = action.payload.value;
+            })
+            .addCase(clearData.rejected, (state, action) => {
+                state.loading = false;
+                state.error = action.payload;
+            })
     }
 });
 
