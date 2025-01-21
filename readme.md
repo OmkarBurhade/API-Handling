@@ -16,7 +16,7 @@
 1) create async thunk in redux tool-kit ✅
 2) create API async methods and define actions ✅
 3) save the response in the slices stats ✅
-4) CRUD operations Using json server 
+4) CRUD operations Using json server ✅
 5) show your data in your UI ✅
 6) verify redux browser extensions ✅
 7) material UI 
