@@ -13,14 +13,14 @@
 
 # Tasks:
 
-1) create async thunk in redux tool-kit
-2) create API async methods and define actions
-3) save the response in the slices stats
-4) CRUD operations Using json server
-5) show your data in your UI
+1) create async thunk in redux tool-kit ✅
+2) create API async methods and define actions ✅
+3) save the response in the slices stats ✅
+4) CRUD operations Using json server 
+5) show your data in your UI ✅
 6) verify redux browser extensions ✅
-7) material UI
-
+7) material UI 
+8) make the counter application make a conter state  + / * -  axios .get .put .update .delete
 **converting context to redux**
 **useRef** in react
 **useReducer**
