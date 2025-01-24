@@ -31,8 +31,8 @@ const App = () => {
             data.map((items, index) => {
               return (
                 <div key={index}>
-                  <h3 className='text-2xl text-emerald-500 font-semibold'>{items.name}</h3>
-                  <p className=' text-zinc-500 font-medium'>{items.website}</p>
+                  <h3 className='text-2xl text-zinc-500  font-medium'>{items.name}</h3>
+                  <p className='text-emerald-500 text-lg font-normal'><a href={`https://${items.website}`} >{items.website}</a></p>
                 </div>
               )
             })
