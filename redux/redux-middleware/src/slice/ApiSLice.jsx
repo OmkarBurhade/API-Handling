@@ -4,10 +4,12 @@ import axiosInstance from "../utils/Axios";
 export const fetchdata = createAsyncThunk(
     'api/fetchdata',
     async () => {
-
-        const res = await axiosInstance.get('/users')
-        return res.data
-
+        try {
+            const res = await axiosInstance.get('/users')
+            return res.data
+        } catch (error) {
+            console.log(error);
+        }
     }
 )
 
