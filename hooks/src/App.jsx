@@ -6,7 +6,7 @@ const App = () => {
   const scrollToSection = () => {
     sectionRef.current.scrollIntoView({ behavior: 'smooth' })
   }
- 
+
   const nameRef = useRef(null);
   const emailRef = useRef(null);
 
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div>
 
-     
+
       <br /> <hr />
       <button onClick={scrollToSection} style={{ margin: '10px' }}>Go to section</button>
       <div style={{ height: '100vh' }}>Scroll down</div>
