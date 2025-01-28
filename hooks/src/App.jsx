@@ -1,47 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import UseRef from './hooks/UseRef'
+import UseCallback from './hooks/UseCallback';
+import UseMemo from './hooks/UseMemo';
+import Home from './components/Home';
 
 const App = () => {
-  const sectionRef = useRef(null);
-
-  const scrollToSection = () => {
-    sectionRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
-
-  const nameRef = useRef(null);
-  const emailRef = useRef(null);
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    if (!nameRef.current.value) {
-      alert('name is required');
-      nameRef.current.focus();
-      return;
-    }
-    if (!emailRef.current.value) {
-      alert('name is required');
-      emailRef.current.focus();
-      return;
-    }
-
-    alert('From submitted successfully')
-  }
-
   return (
-    <div>
 
-
-      <br /> <hr />
-      <button onClick={scrollToSection} style={{ margin: '10px' }}>Go to section</button>
-      <div style={{ height: '100vh' }}>Scroll down</div>
-      <div ref={sectionRef} style={{ height: '50vh', background: 'lightblue' }}>Target Section</div>
-
-      <form onSubmit={handleSubmit}>
-        <input ref={nameRef} type="text" placeholder="Name" />
-        <input ref={emailRef} type="email" placeholder='email...' />
-        <button type='submit'>Submit</button>
-      </form>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/useRef" element={<UseRef />} />
+      <Route path="/useCallback" element={<UseCallback />} />
+      <Route path="/useMemo" element={<UseMemo />} />
+    </Routes>
   )
 }
 
