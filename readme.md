@@ -35,11 +35,16 @@
 13) useCallback ✅
 14) useMemo ✅
 15) formik 
-16) Closures in js
+16) Closures in js 
 17) reacy-router-dom 
 
 **converting context to redux**
 
+1) function declaration 
+2) function execution / function invocation 
+3) function instanciaction (new key word use krun aapan store kru shakto) 
+5) function assignment (variable madhe store ho fanction)
+6) what are a defrent method to create the functions ✅
 # how to Live React Project
   •run this command:
   1) npm run build
