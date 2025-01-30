@@ -34,6 +34,9 @@
 12) useRef ✅
 13) useCallback ✅
 14) useMemo ✅
+15) formik 
+16) Closures in js
+17) reacy-router-dom 
 
 **converting context to redux**
 
