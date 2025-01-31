@@ -37,6 +37,8 @@
 15) formik 
 16) Closures in js 
 17) reacy-router-dom 
+18) make anav bar using arry routing / nasted routeing
+19) micro frontend aplication
 
 **converting context to redux**
 
